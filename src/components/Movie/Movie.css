@@ -1,0 +1,73 @@
+.customCard {
+    height: 281px;
+    width: 454px;
+    box-shadow: 5px 5px 5px lightgrey;
+}
+
+.movie__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.ant-rate .ant-rate-star:not(:last-child) {
+    margin-right: 3px;
+}
+
+.card__content {
+    display: grid;
+    grid-template-areas:
+        "img  title"
+        "img  date"
+        "img  ganres"
+        "img  desc"
+        "img  rate";
+    width: 454px;
+    height: 280px;
+    grid-template-rows: 50px 20px 40px 130px;
+    grid-column-gap: 20px;
+    grid-template-columns: 186px 227px;
+}
+
+.card__content > .ant-image {
+    grid-area: img;
+}
+.card__content > .movie__title {
+    grid-area: title;
+}
+.card__content > .customCard__paragraph {
+    grid-area: date;
+}
+.card__content > .genreList {
+    grid-area: ganres;
+}
+.card__content > .movie__desc {
+    grid-area: desc;
+}
+.card__content > .ant-rate {
+    grid-area: rate;
+}
+
+@media screen and (max-width: 980px) {
+    .card__content {
+        display: grid;
+        grid-template-areas:
+            "img  title"
+            "img  date"
+            "img  ganres"
+            "desc  desc"
+            "none  rate";
+        width: 387px;
+        height: 245px;
+        grid-template-rows: 50px 44px 36px 104px;
+        grid-column-gap: 10px;
+        grid-template-columns: 86px 309px;
+    }
+    .card__content > .movie__desc {
+        padding: 15px 0 0 10px;
+    }
+    .card__content > .ant-rate {
+        margin-left: 60px;
+    }
+}

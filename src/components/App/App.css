@@ -1,0 +1,11 @@
+@import "~antd/dist/antd.css";
+
+.app {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.app__nav {
+    display: flex;
+    justify-content: center;
+}
